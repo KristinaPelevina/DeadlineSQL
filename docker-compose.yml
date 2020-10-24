@@ -6,7 +6,7 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - ./mysql-dump:/docker-entrypoint-initdb.d
+      - ./schema:/docker-entrypoint-initdb.d/:ro
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=app
